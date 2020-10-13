@@ -1,21 +1,19 @@
 #Build Configuration & Enviroment Variable (Change the values depending on your System)
-defconfig="bcm2709_defconfig"
-kernel="kernel7l"
+defconfig=bcm2711_defconfig
+KERNEL=kernel7l
 
-sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make
+sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
 git clone --depth=1 https://github.com/raspberrypi/linux
+git clone https://github.com/s3720974/Unix2
+
+#cd linux
+#make $defconfig
 
 
-
-cd linux
-make $defconfig
-
-cd ..
+#cd ..
 mv .config linux
 
 sudo tar -cvf backup.tar /boot/
-
-
 
 cd linux
 make -j4 zImage modules dtbs
@@ -23,7 +21,4 @@ sudo make modules_install
 sudo cp arch/arm/boot/dts/*.dtb /boot/
 sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
 sudo cp arch/arm/boot/dts/overlays/README /boot/overlays/
-sudo cp arch/arm/boot/zImage /boot/unikernel.img
-
-
-sudo sed -i -e '1ikernel=unikernel.img\' /boot/config.txt
+sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
