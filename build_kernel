@@ -1,20 +1,27 @@
+#!/bin/bash
+
+
 #Build Configuration & Enviroment Variable (Change the values depending on your System)
 defconfig=bcm2711_defconfig
 KERNEL=kernel7l
 
+#Installs and Downloads functions and scripts (Dependencies and Github files)
 sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
 git clone --depth=1 https://github.com/raspberrypi/linux
-git clone https://github.com/s3720974/Unix2
+git clone git@github.com:s3720974/Unix2.git
 
-#cd linux
-#make $defconfig
+#Creates a default configuration file
+cd linux
+make $defconfig
 
-
-#cd ..
+#Moves config file downloaded from github to kernel installation folder
+cd ..
 mv .config linux
 
+#Backs up boot files
 sudo tar -cvf backup.tar /boot/
 
+#Compilation and Building of Kernel + Copying of important files to boot folder
 cd linux
 make -j4 zImage modules dtbs
 sudo make modules_install
@@ -22,3 +29,6 @@ sudo cp arch/arm/boot/dts/*.dtb /boot/
 sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
 sudo cp arch/arm/boot/dts/overlays/README /boot/overlays/
 sudo cp arch/arm/boot/zImage /boot/$KERNEL.img
+
+#Reboot Pi
+sudo reboot
