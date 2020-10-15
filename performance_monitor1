@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+start=$(date +%s.%N)
+
+while true
+do
+temp=$(vcgencmd measure_temp | egrep -o '[0-9]*\.[0-9]*')
+
+duration=$(echo "$(date +%s.%N) - $start" | bc)
+
+printf "%-15s%5s\n" "$duration" "$temp" >> kernel_performance_data  
+sleep 1s
+
+done
+
+let start=$(date +%H)*3600+$(date +%M)*60+$(date +%S)
+
+
