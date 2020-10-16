@@ -1,0 +1,59 @@
+commit 22cf9836619256fb67eb99be95af6dd6e176e577
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Fri Oct 16 13:02:55 2020 +1100
+
+    Added Commenting for scripts and few additional lines added
+
+commit 12ece28065964f03edb19cbb88ad0e3ce7d1256f
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Thu Oct 15 11:53:28 2020 +1100
+
+    Performance Monitoring Script Created
+
+commit d09c2a9908d7dd0416678ffd0c8849e07cdf6af7
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Wed Oct 14 11:53:40 2020 +1100
+
+    Added Documentation and few changes to script
+
+commit 088f25b6d2b70a39b0b80b9251aa5a2abe725a65
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Wed Oct 14 01:17:24 2020 +1100
+
+    Added Script 1 to be added on updates as it was forgotten
+
+commit 853b32cbfdacbae72be53affed8b142c28c0fe41
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Wed Oct 14 01:11:03 2020 +1100
+
+    Delete old script
+
+commit a66c4a7751f250aa517c31d026b3c13ec750714d
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Wed Oct 14 01:03:14 2020 +1100
+
+    new Pi setup as old script had wrong default config and crashed it, .config file uploaded
+
+commit 4adf41905ca0b2388d09eeb916494fd4008e303e
+Author: Stephen James Consunji <s3720974@student.rmit.edu.au>
+Date:   Thu Sep 24 04:03:17 2020 +1000
+
+    Added Backing up of Boot folder in case of kernel copy failure
+
+commit 0b7384866a3b3fe193ee4d5e7afe923e15fe6fa9
+Author: Stephen James Consunji <s3720974@student.rmit.edu.au>
+Date:   Wed Sep 23 06:01:51 2020 +1000
+
+    Rename file, Change approach on script by removing case, added few lines to download,compile and install kernel
+
+commit 2866d5a58f9fd9d6b6e2fa268f3f139a5ba416a7
+Author: Stephen James Consunji <s3720974@student.rmit.edu.au>
+Date:   Mon Sep 21 06:52:33 2020 +1000
+
+    Added Case Statements for different versions of Pi
+
+commit e1f1c97942f335ed64c9dc3710c1459bb0aa5b79
+Author: Stephen James Consunji <s3720974@student.rmit.edu.au>
+Date:   Mon Sep 21 06:33:21 2020 +1000
+
+    Create Empty Kernel Compilation Script

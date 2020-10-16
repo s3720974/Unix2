@@ -3,21 +3,19 @@
 defconfig=bcm2711_defconfig
 KERNEL=kernel7l
 
-#Start performance_monitor1 script
-sh performance_monitor1
-
 # Installs and Downloads functions and scripts (Dependencies and Github files)
-sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
-git clone --depth=1 https://github.com/raspberrypi/linux
+sh performance_monitor1 & sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
 git clone git@github.com:s3720974/Unix2.git
+git clone --depth=1 https://github.com/raspberrypi/linux
 
 # Creates a default configuration file
 cd linux
 make $defconfig
+cd ..
 
 # Moves config file downloaded from github to kernel installation folder
-cd ..
 mv .config linux
+cd linux
 
 # Backs up boot files
 sudo tar -cvf backup.tar /boot/
