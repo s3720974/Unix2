@@ -1,19 +1,25 @@
 #!/bin/bash
 
-
+# Stores Current Date to $start variable
 start=$(date +%s.%N)
 
+# While loop, While it is true do this ....
 while true
 do
-temp=$(vcgencmd measure_temp | egrep -o '[0-9]*\.[0-9]*')
 
+# temp variable is equal to the "vcgencmd measure_temp" not including unecessary information which is removed using grep
+temp=$(vcgencmd measure_temp | grep -E -o '[0-9]*\.[0-9]*')
+
+
+# duration Variable is equal to current date minus the start variable
 duration=$(echo "$(date +%s.%N) - $start" | bc)
 
-printf "%-15s%5s\n" "$duration" "$temp" >> kernel_performance_data  
-sleep 1s
+# print following variable and add it kernel_performance_data file
+printf "%-15s%5s\\n" "$duration" "$temp" >> kernel_performance_data  
 
+#script sleep for 10 seconds to prevent spam and recording of temperature
+sleep 10s
+
+# ends while loop
 done
-
-let start=$(date +%H)*3600+$(date +%M)*60+$(date +%S)
-
 
