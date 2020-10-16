@@ -12,6 +12,7 @@ git clone --depth=1 https://github.com/raspberrypi/linux
 cd Unix2
 mv .config ..
 mv performance_monitor1 ..
+cd ..
 
 # Creates a default configuration file
 cd linux
