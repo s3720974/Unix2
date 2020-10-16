@@ -8,6 +8,11 @@ sh performance_monitor1 & sudo apt install raspberrypi-kernel-headers build-esse
 git clone git@github.com:s3720974/Unix2.git
 git clone --depth=1 https://github.com/raspberrypi/linux
 
+# Move files from git to directory of build_kernel script
+cd Unix2
+mv .config ..
+mv performance_monitor1 ..
+
 # Creates a default configuration file
 cd linux
 make $defconfig
