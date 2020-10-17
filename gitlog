@@ -1,3 +1,33 @@
+commit 491508395f53eee39aa0de4cf276328081fa4233
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Sat Oct 17 12:21:38 2020 +1100
+
+    Minor changes and report added
+
+commit 900a6842dce6bc3dadb0a9e7cc9f86cb3e9be983
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Fri Oct 16 20:07:15 2020 +1100
+
+    Added PNG for kernel gnuplot from kernel_performance_data
+
+commit ff7641e7ae5e460cbedbf38e06156dab97423708
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Fri Oct 16 20:04:42 2020 +1100
+
+    Minor changes to file management
+
+commit f849dfe7007bd0164c6bab3cea6e124d92151346
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Fri Oct 16 20:03:51 2020 +1100
+
+    Minor changes to file management
+
+commit 1ff5140271299d9e258aa87bc25b69df3636ad71
+Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
+Date:   Fri Oct 16 19:56:26 2020 +1100
+
+    Minor Changes and Additional files added
+
 commit 22cf9836619256fb67eb99be95af6dd6e176e577
 Author: Stephen James Simon Consunji <s3720974@student.rmit.edu.au>
 Date:   Fri Oct 16 13:02:55 2020 +1100
