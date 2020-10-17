@@ -4,7 +4,7 @@ defconfig=bcm2711_defconfig
 KERNEL=kernel7l
 
 # Installs and Downloads functions and scripts (Dependencies and Github files)
-sh performance_monitor1 & sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
+sudo apt install raspberrypi-kernel-headers build-essential bc git wget bison flex libssl-dev make -y
 git clone git@github.com:s3720974/Unix2.git
 git clone --depth=1 https://github.com/raspberrypi/linux
 
@@ -15,7 +15,7 @@ mv performance_monitor1 ..
 cd ..
 
 # Creates a default configuration file
-cd linux
+sh performance_monitor1 & cd linux
 make $defconfig
 cd ..
 
@@ -28,7 +28,7 @@ sudo tar -cvf backup.tar /boot/
 
 # Compilation and Building of Kernel + Copying of important files to boot folder
 cd linux
-make -j4 zImage modules dtbs
+sudo make -j4 zImage modules dtbs
 sudo make modules_install
 sudo cp arch/arm/boot/dts/*.dtb /boot/
 sudo cp arch/arm/boot/dts/overlays/*.dtb* /boot/overlays/
